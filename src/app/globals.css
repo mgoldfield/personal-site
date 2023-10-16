@@ -1,9 +1,19 @@
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items:center;
   justify-content: center;
+  background-color:peachpuff;
 }
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  display: inline;
+}
+
 
 /*
 :root {
