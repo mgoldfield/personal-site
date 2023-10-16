@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { HeaderNav, Title } from "./helpers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,14 +19,8 @@ export default function RootLayout({
       </head>
       <body>
         <header>
-          <div className="title">Matthew Goldfield</div>
-          <nav>
-            <ul>
-              <li>About</li>
-              <li>Projects</li>
-              <li>GitHub</li>
-            </ul>
-          </nav>
+          <Title />
+          <HeaderNav />
         </header>
         {children}
       </body>
