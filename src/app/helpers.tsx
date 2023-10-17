@@ -8,8 +8,10 @@ export function isProduction() {
 export function Title() {
   const homeLink = isProduction() ? "https://mattg.xyz" : "localhost::3000";
   return (
-    <div className="header-title">
-      <Link href={homeLink}>Matthew Goldfield</Link>
+    <div className={styles.headerTitle}>
+      <Link href={homeLink} className={styles.headerTitle}>
+        Matthew Goldfield
+      </Link>
     </div>
   );
 }
@@ -30,7 +32,7 @@ function HeaderNavLink({
 
 export function HeaderNav() {
   return (
-    <nav className="header-nav">
+    <nav className={styles.headerNav}>
       <HeaderNavLink href="./about">About</HeaderNavLink>
       <HeaderNavLink href="./projects">Projects</HeaderNavLink>
       <HeaderNavLink href="./blog">Blog</HeaderNavLink>
