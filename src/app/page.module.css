@@ -1,6 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  background-color:rgb(16, 159, 216);
+}
+
+.headerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
 .headerNavLink {
-  padding: 10px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5%;
+  border-width: 2px;
+  border-color: var(--header-text-color);
+  text-decoration: none;
+  border-style: double;
+
+}
+
+.headerTitle {
+  text-decoration: none;
+  margin: 4px;
+  color: #eae4e970
 }
 
 

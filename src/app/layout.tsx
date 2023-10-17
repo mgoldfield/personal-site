@@ -1,6 +1,8 @@
-import "./globals.css";
+import "../styles/globals.css";
+import "../styles/variables.css";
 import type { Metadata } from "next";
 import { HeaderNav, Title } from "./helpers";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +20,7 @@ export default function RootLayout({
         <title>Matthew Goldfield</title>
       </head>
       <body>
-        <header>
+        <header className={styles.header}>
           <Title />
           <HeaderNav />
         </header>
