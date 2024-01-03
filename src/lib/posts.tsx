@@ -13,7 +13,7 @@ import html from 'remark-html';
 
         const metadata = matter(fileContents);
         const post: Blogpost = {
-            id: filename,
+            id: filename.split('.')[0],
             title: metadata.data.title,
             date: metadata.data.date
         };
