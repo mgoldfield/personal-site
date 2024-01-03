@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import "../styles/variables.css";
 import type { Metadata } from "next";
-import { HeaderNav, Title } from "./helpers";
+import { Title } from "./components/helpers";
+import { HeaderNav } from "./components/header";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -19,12 +20,14 @@ export default function RootLayout({
       <head>
         <title>Matthew Goldfield</title>
       </head>
-      <body>
+      <body className="dark:bg-slate-800">
         <header className={styles.header}>
           <Title />
           <HeaderNav />
         </header>
-        {children}
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   );
