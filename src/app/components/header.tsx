@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import {FaGithub} from "react-icons/fa";
 
 function HeaderNavLink({
   children: title,
