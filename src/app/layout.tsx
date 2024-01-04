@@ -1,9 +1,7 @@
 import "../styles/globals.css";
 import "../styles/variables.css";
 import type { Metadata } from "next";
-import { Title } from "./components/helpers";
 import { HeaderNav } from "./components/header";
-import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,8 +19,7 @@ export default function RootLayout({
         <title>Matthew Goldfield</title>
       </head>
       <body className="dark:bg-slate-800">
-        <header className={styles.header}>
-          <Title />
+        <header className="">
           <HeaderNav />
         </header>
         <div>

@@ -22,16 +22,19 @@ import html from 'remark-html';
     return allPosts.sort((p, q) => p.date < q.date ? 1 : -1);
  }
 
+ export async function transformMarkdown(text: string) {
+    return (await remark().use(html).process(text)).toString();
+ }
+
  export async function getPost(id: string) {
     const postPath = path.join(postsDirectory, `${id}.md`);
     const postText = fs.readFileSync(postPath, 'utf-8');
     const metadata = matter(postText);
-    const formattedPostText = await remark().use(html).process(metadata.content);
     const formattedPost: Blogpost & {contentHTML: string} = {
         id, 
         title: metadata.data.title,
         date: metadata.data.date,
-        contentHTML: formattedPostText.toString(),
+        contentHTML: await transformMarkdown(metadata.content),
     }
     return formattedPost;
  }
