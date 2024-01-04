@@ -2,9 +2,9 @@ Hello! My name is Matt Goldfield. I work on projects centered around
 data, distributed systems, music, and combinations of those topics. I
 like thinking about how humans collaborate and build relationships, and
 about work and housing coops. I sometimes play and record music, and I
-cook and bake a lot. I'm currently a software engineer at
-[iZotope](https://www.izotope.com/). I'm an
-emeritus member at the worker coop [Politics Rewired](https://www.politicsrewired.com/)
+cook and bake a lot. 
+
+I'm currently a software engineer at [iZotope](https://www.izotope.com/). 
 
 Various current and past software projects, including a (now inactive)
 simple in-browser DAW called [LoopMagic!](https://github.com/mgoldfield/nodelooper). 
