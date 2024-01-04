@@ -1,5 +1,4 @@
 import { getSortedPosts, getPost, getFormattedDate } from "@/lib/posts";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
