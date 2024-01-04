@@ -9,7 +9,7 @@ function HeaderNavLink({
   href: string;
 }) {
   return (
-    <Link className="text-white/90  no-underline hover:text-white p-4" href={href}>
+    <Link className="text-white/90  no-underline hover:text-white" href={href}>
       {title}
     </Link>
   );
@@ -17,7 +17,8 @@ function HeaderNavLink({
 
 export function HeaderNav() {
   return (
-    <nav className="bg-slate-600 p-4 sticky top-0 drop-shadow-xl z-10">
+    <nav className="bg-slate-600 p-2 sticky drop-shadow-xl ">
+      <div className="text-center underline decoration-double"><Link href="/">Matthew Goldfield</Link></div>
       <div className="prose prose-xl mx-auto flex justify-between flex-row">
         <HeaderNavLink href="/about">About</HeaderNavLink>
         <HeaderNavLink href="/projects">Projects</HeaderNavLink>

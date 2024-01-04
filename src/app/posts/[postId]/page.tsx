@@ -23,9 +23,6 @@ export default async function BlogPost({ params: {postId} }: {params: { postId: 
                 </p>
                 <article>
                     <section dangerouslySetInnerHTML={{ __html: contentHTML}} />
-                    <p>
-                        <Link href="/">back home</Link>
-                    </p>
                 </article>
             </main>
         )
