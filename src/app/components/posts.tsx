@@ -44,7 +44,7 @@ function ResourcesSection() {
                         Technical Resources
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        Books, blogs, and courses I've learned from
+                        Books, blogs, and courses I&apos;ve learned from
                     </p>
                 </Link>
                 
@@ -84,7 +84,7 @@ export default function Posts() {
                                     href={`/blog/${category}`}
                                     className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 font-medium"
                                 >
-                                    {category === 'dsp' ? 'DSP & Audio' : category.charAt(0).toUpperCase() + category.slice(1)}
+                                    {category === 'dsp' ? 'DSP & Audio' : (category || '').charAt(0).toUpperCase() + (category || '').slice(1)}
                                 </Link>
                             ))}
                         </div>

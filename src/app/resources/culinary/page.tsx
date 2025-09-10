@@ -14,7 +14,7 @@ export default function CulinaryResources() {
             
             <div className="mb-8">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Culinary Resources I've Learned From
+                    Culinary Resources I&apos;ve Learned From
                 </h1>
             </div>
 
