@@ -18,20 +18,6 @@ export default function Main() {
               </Link>
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <Link 
-              href="/blog"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
-            >
-              Read My Blog
-            </Link>
-            <Link 
-              href="/projects"
-              className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 font-medium rounded-lg transition-colors duration-200"
-            >
-              View Projects
-            </Link>
-          </div>
         </div>
       </section>
 
