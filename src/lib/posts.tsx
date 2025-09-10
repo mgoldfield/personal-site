@@ -29,9 +29,9 @@ import rehypeStringify from 'rehype-stringify';
  export async function transformMarkdown(text: string) {
     return (await remark()
         .use(remarkMath)
-        .use(remarkRehype)
+        .use(remarkRehype, { allowDangerousHtml: true })
         .use(rehypeKatex)
-        .use(rehypeStringify)
+        .use(rehypeStringify, { allowDangerousHtml: true })
         .process(text)).toString();
  }
 
