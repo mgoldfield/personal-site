@@ -14,10 +14,10 @@ export default function TechnicalResources() {
             
             <div className="mb-8">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    Technical Resources I've Learned From
+                    Technical Resources I&apos;ve Learned From
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400">
-                    Here are some things I've learned from in the past. Most of them are free!
+                    Here are some things I&apos;ve learned from in the past. Most of them are free!
                 </p>
             </div>
 
