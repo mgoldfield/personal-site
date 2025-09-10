@@ -2,7 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import {remark} from 'remark';
-import html from 'remark-html';
+import remarkMath from 'remark-math';
+import remarkRehype from 'remark-rehype';
+import rehypeKatex from 'rehype-katex';
+import rehypeStringify from 'rehype-stringify';
 
  const postsDirectory = path.join(process.cwd(), 'src', 'blog-posts');
  export function getSortedPosts() {
@@ -15,7 +18,8 @@ import html from 'remark-html';
         const post: Blogpost = {
             id: filename.split('.')[0],
             title: metadata.data.title,
-            date: metadata.data.date
+            date: metadata.data.date,
+            category: metadata.data.category
         };
         return post;
     });
@@ -23,7 +27,12 @@ import html from 'remark-html';
  }
 
  export async function transformMarkdown(text: string) {
-    return (await remark().use(html).process(text)).toString();
+    return (await remark()
+        .use(remarkMath)
+        .use(remarkRehype)
+        .use(rehypeKatex)
+        .use(rehypeStringify)
+        .process(text)).toString();
  }
 
  export async function getPost(id: string) {
@@ -41,4 +50,15 @@ import html from 'remark-html';
 
 export function getFormattedDate(date: string){
     return new Intl.DateTimeFormat('en-us', {dateStyle: 'long'}).format(new Date(date));
+}
+
+export function getPostsByCategory(category: string) {
+    const allPosts = getSortedPosts();
+    return allPosts.filter(post => post.category === category);
+}
+
+export function getCategories() {
+    const allPosts = getSortedPosts();
+    const categories = new Set(allPosts.map(post => post.category).filter(Boolean));
+    return Array.from(categories);
 }
