@@ -46,7 +46,7 @@ export default function Main() {
               Blog
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Thoughts, tutorials, and insights on development and technology.
+              Thoughts and learnings about music, audio dsp, programming, and the like.
             </p>
           </Link>
           
@@ -58,7 +58,7 @@ export default function Main() {
               Projects
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              A showcase of my work, experiments, and open source contributions.
+              Some of my work including music and open source contributions.
             </p>
           </Link>
           
@@ -72,7 +72,7 @@ export default function Main() {
               GitHub
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Explore my code, contributions, and collaborative projects.
+              Check out the code.
             </p>
           </Link>
         </div>
