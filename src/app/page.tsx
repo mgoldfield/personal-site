@@ -6,10 +6,6 @@ export default function Main() {
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Hello, I'm{' '}
-            <span className="text-blue-600 dark:text-blue-400">Matthew</span>
-          </h1>
           <div className="prose prose-lg prose-gray dark:prose-invert max-w-none mb-8">
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Hello! I work on projects centered around data, distributed systems, music, and combinations of those topics. 
