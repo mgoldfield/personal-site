@@ -2,7 +2,20 @@ import "../styles/globals.css";
 import "../styles/variables.css";
 import "katex/dist/katex.min.css";
 import type { Metadata } from "next";
+import { Inter, Crimson_Pro } from "next/font/google";
 import { HeaderNav } from "./components/header";
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const crimsonPro = Crimson_Pro({
+  subsets: ['latin'],
+  variable: '--font-crimson-pro',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +32,7 @@ export default function RootLayout({
       <head>
         <title>Matthew Goldfield</title>
       </head>
-      <body className="dark:bg-slate-800">
+      <body className={`${inter.variable} ${crimsonPro.variable} dark:bg-slate-800`}>
         <header className="">
           <HeaderNav />
         </header>
