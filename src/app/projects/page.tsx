@@ -7,6 +7,22 @@ export default async function Projects() {
       <h1 className="text-3xl mt-4 mb-0">Projects</h1>
       <article>
         <section className="m-5">
+            <a href="https://mollybajgot.bandcamp.com/album/revelry" className="underline"><em>Revelry</em> by Molly Bajgot</a>
+            <div>
+                <a href="https://mollybajgot.bandcamp.com/album/revelry">
+                    <Image 
+                        alt="Revelry album art" 
+                        src="https://f4.bcbits.com/img/a1516643014_10.jpg" 
+                        className="m-0"
+                        width={300}
+                        height={300} />
+                </a>
+            </div>
+            <div className="prose-sm">
+                keyboards
+            </div>
+        </section>
+        <section className="m-5">
             <a href="https://elulmusicproject.bandcamp.com/music" className="underline">High Holiday Albums with <em>Cap and Scarf</em></a>
             <div className="flex flex-row justify-between">
                 <a href="https://elulmusicproject.bandcamp.com/album/tishrei-the-end-is-the-beginning">
