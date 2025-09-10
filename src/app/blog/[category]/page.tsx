@@ -64,20 +64,29 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
                 </Link>
             </div>
 
-            <div className="space-y-8">
+            <ul className="space-y-4">
                 {posts.map(post => (
-                    <article key={post.id} className="group p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-lg transition-all duration-200">
-                        <Link href={`/posts/${post.id}`}>
-                            <h2 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 mb-2">
-                                {post.title}
-                            </h2>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">
-                                {getFormattedDate(post.date)}
-                            </p>
+                    <li key={post.id} className="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-md transition-all duration-200">
+                        <Link className="block" href={`/posts/${post.id}`}>
+                            <div className="flex items-center justify-between">
+                                <div className="flex-1">
+                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                                        {post.title}
+                                    </h3>
+                                    <div className="flex items-center gap-3 mt-1">
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">{getFormattedDate(post.date)}</p>
+                                        {post.category && (
+                                            <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+                                                {post.category}
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
                         </Link>
-                    </article>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </main>
     );
 }
