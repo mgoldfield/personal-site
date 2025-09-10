@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/variables.css";
+import "katex/dist/katex.min.css";
 import type { Metadata } from "next";
 import { HeaderNav } from "./components/header";
 
