@@ -1,12 +1,13 @@
 import { getSortedPosts, getPost, getFormattedDate } from "@/lib/posts";
 import { notFound } from "next/navigation";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
     const posts = getSortedPosts();
     return posts.map(p => ({postId: p.id}));
 }
 
-export default async function BlogPost({ params: {postId} }: {params: { postId: string}}){
+export default async function BlogPost({ params }: {params: Promise<{ postId: string}>}){
+    const {postId} = await params;
     const posts = getSortedPosts(); 
     const maybePost = posts.find(post => post.id === postId);
     if (!maybePost){
