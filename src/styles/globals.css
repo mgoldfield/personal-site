@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base typography */
+body {
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+/* Blog post content should use serif for better readability */
+.prose {
+  font-family: var(--font-crimson-pro), ui-serif, Georgia;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+  font-weight: 600;
+}
+
+/* Keep UI elements in sans-serif */
+.font-sans {
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+/* Recipe table styles */
+.recipe-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+}
+
+.recipe-table th,
+.recipe-table td {
+  border: 1px solid #ddd;
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.recipe-table th {
+  background-color: #64748b;
+  color: white;
+  font-weight: 600;
+}
+
+.recipe-table tr:nth-child(even) {
+  background-color: #7c8fa8;
+}
+
+.recipe-table tr:hover {
+  background-color: #94a3b8;
+}
