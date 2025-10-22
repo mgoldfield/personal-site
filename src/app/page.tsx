@@ -1,6 +1,32 @@
 import Link from "next/link";
+import { getSortedPosts, getFormattedDate } from "@/lib/posts";
+
+function RecentPostItem({ post }: { post: Blogpost }) {
+  const { id, title, date, category } = post;
+  const formattedDate = getFormattedDate(date);
+  
+  return (
+    <Link 
+      href={`/posts/${id}`}
+      className="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-md transition-all duration-200 block"
+    >
+      <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
+        {title}
+      </h3>
+      <div className="flex items-center gap-3">
+        <p className="text-sm text-gray-600 dark:text-gray-400">{formattedDate}</p>
+        {category && (
+          <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+            {category}
+          </span>
+        )}
+      </div>
+    </Link>
+  );
+}
 
 export default function Main() {
+  const recentPosts = getSortedPosts().slice(0, 3);
   return (
     <main className="min-h-screen bg-white dark:bg-slate-800">
       {/* Hero Section */}
@@ -18,6 +44,29 @@ export default function Main() {
               </Link>
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Recent Blog Posts Section */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Recent Posts</h2>
+          <p className="text-gray-600 dark:text-gray-400">Latest thoughts and learnings</p>
+        </div>
+        
+        <div className="space-y-4 mb-6">
+          {recentPosts.map(post => (
+            <RecentPostItem key={post.id} post={post} />
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <Link 
+            href="/blog"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            View All Posts →
+          </Link>
         </div>
       </section>
 
