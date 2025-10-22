@@ -33,7 +33,7 @@ export function ListItem({post}: ListItemProps) {
 
 function ResourcesSection() {
     return (
-        <div className="mb-8">
+        <div className="mb-8 mt-8">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Resources</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 <Link 
@@ -92,8 +92,6 @@ export default function Posts() {
                 )}
             </div>
             
-            <ResourcesSection />
-            
             <div className="mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">All Posts</h2>
             </div>
@@ -101,6 +99,8 @@ export default function Posts() {
             <ul className="space-y-4">
                 {posts.map(post => ListItem({post}))}
             </ul>
+
+            <ResourcesSection />
         </section>
     );
 }
