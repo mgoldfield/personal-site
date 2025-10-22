@@ -34,7 +34,7 @@ export default function Main() {
         <div className="max-w-4xl">
           <div className="prose prose-lg prose-gray dark:prose-invert max-w-none mb-8">
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Hello! I work on projects centered around data, distributed systems, music, and combinations of those topics. 
+              Hello! I work on projects centered around data, music and digital audio, distributed systems, and combinations of those topics. 
               I like thinking about how humans collaborate and build relationships, and about work and housing coops. 
               I sometimes play and record music, and I cook and bake a lot.
             </p>
