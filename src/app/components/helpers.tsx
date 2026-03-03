@@ -7,7 +7,7 @@ export async function markdownPage(dir: string, name: string, title: string) {
   const markdown = fs.readFileSync(markdownPath);
   const htmlToOutput = await transformMarkdown(markdown.toString());
   return (
-    <main className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
+    <main className="px-6 prose prose-xl prose-stone dark:prose-invert mx-auto">
         <h1 className="text-3xl mt-4 mb-0">{title}</h1>
         <article>
             <section dangerouslySetInnerHTML={{ __html: htmlToOutput}} />

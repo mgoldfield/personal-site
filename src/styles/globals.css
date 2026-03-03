@@ -27,32 +27,32 @@ body {
 
 .prose th,
 .prose td {
-  border: 1px solid #d1d5db;
+  border: 1px solid #d6d3d1; /* stone-300 */
   padding: 8px 12px;
   text-align: left;
 }
 
 .prose th {
-  background-color: #f8fafc;
+  background-color: #f5f5f4; /* stone-100 */
   font-weight: 600;
 }
 
 .prose tr:nth-child(even) {
-  background-color: #f8fafc;
+  background-color: #fafaf9; /* stone-50 */
 }
 
 @media (prefers-color-scheme: dark) {
   .prose th,
   .prose td {
-    border-color: #475569;
+    border-color: #57534e; /* stone-600 */
   }
 
   .prose th {
-    background-color: #1e293b;
+    background-color: #292524; /* stone-800 */
   }
 
   .prose tr:nth-child(even) {
-    background-color: #1e293b;
+    background-color: #1c1917; /* stone-900 */
   }
 }
 
@@ -66,49 +66,49 @@ body {
   border-collapse: collapse;
   width: 100%;
   margin: 1rem 0;
-  border: 1px solid #d1d5db;
+  border: 1px solid #d6d3d1;
 }
 
 .recipe-table th,
 .recipe-table td {
-  border: 1px solid #d1d5db;
+  border: 1px solid #d6d3d1;
   padding: 12px 8px;
   text-align: left;
 }
 
 .recipe-table th {
-  background-color: #64748b;
+  background-color: #78716c; /* stone-500 */
   color: white;
   font-weight: 600;
 }
 
 .recipe-table tr:nth-child(even) {
-  background-color: #f1f5f9;
+  background-color: #f5f5f4;
 }
 
 .recipe-table tr:hover {
-  background-color: #e2e8f0;
+  background-color: #e7e5e4; /* stone-200 */
 }
 
 @media (prefers-color-scheme: dark) {
   .recipe-table {
-    border-color: #475569;
+    border-color: #57534e;
   }
 
   .recipe-table th,
   .recipe-table td {
-    border-color: #475569;
+    border-color: #57534e;
   }
 
   .recipe-table th {
-    background-color: #334155;
+    background-color: #44403c; /* stone-700 */
   }
 
   .recipe-table tr:nth-child(even) {
-    background-color: #1e293b;
+    background-color: #1c1917;
   }
 
   .recipe-table tr:hover {
-    background-color: #334155;
+    background-color: #44403c;
   }
 }

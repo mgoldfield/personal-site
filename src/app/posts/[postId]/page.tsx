@@ -17,19 +17,19 @@ export default async function BlogPost({ params }: {params: Promise<{ postId: st
         const pubDate = getFormattedDate(date);
         return (
             <main className="max-w-4xl mx-auto px-6 py-8">
-                <article className="prose prose-lg prose-gray dark:prose-invert mx-auto">
-                    <header className="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700">
-                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                <article className="prose prose-lg prose-stone dark:prose-invert mx-auto">
+                    <header className="mb-8 pb-8 border-b border-stone-200 dark:border-stone-700">
+                        <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4 leading-tight">
                             {title}
                         </h1>
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center text-stone-600 dark:text-stone-400">
                             <time dateTime={date} className="text-sm">
                                 {pubDate}
                             </time>
                         </div>
                     </header>
                     <section 
-                        className="prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300"
+                        className="prose-headings:text-stone-900 dark:prose-headings:text-white prose-p:text-stone-700 dark:prose-p:text-stone-300"
                         dangerouslySetInnerHTML={{ __html: contentHTML}} 
                     />
                 </article>

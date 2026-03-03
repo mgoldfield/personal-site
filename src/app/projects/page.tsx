@@ -15,7 +15,7 @@ function ProjectCard({
     children?: React.ReactNode;
 }) {
     return (
-        <div className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 overflow-hidden hover:shadow-md transition-all duration-200">
+        <div className="group rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 overflow-hidden hover:shadow-md transition-all duration-200">
             <Link href={href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-4">
                 {images.map((img, i) => (
                     <Image
@@ -33,11 +33,11 @@ function ProjectCard({
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200"
+                    className="text-lg font-medium text-stone-900 dark:text-white group-hover:text-amber-800 dark:group-hover:text-amber-400 transition-colors duration-200"
                 >
                     {title}
                 </Link>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{description}</p>
+                <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">{description}</p>
                 {children}
             </div>
         </div>
@@ -47,7 +47,7 @@ function ProjectCard({
 export default function Projects() {
     return (
         <main className="max-w-4xl mx-auto px-6 py-8">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Projects</h1>
+            <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-8">Projects</h1>
 
             <div className="grid md:grid-cols-2 gap-6">
                 <ProjectCard

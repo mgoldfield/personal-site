@@ -6,19 +6,19 @@ export default function CulinaryResources() {
             <div className="mb-8">
                 <Link 
                     href="/blog"
-                    className="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors duration-200"
+                    className="text-amber-800 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-300 transition-colors duration-200"
                 >
                     ← Back to blog
                 </Link>
             </div>
             
             <div className="mb-8">
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
                     Culinary Resources I&apos;ve Learned From
                 </h1>
             </div>
 
-            <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
+            <div className="prose prose-lg prose-stone dark:prose-invert max-w-none">
                 <h2>Books</h2>
                 <ul>
                     <li><a href="https://www.goodreads.com/book/show/17557476-tartine-book-no-3?ref=nav_sb_ss_1_13">Tartine Book No. 3</a> by Chad Robertson</li>

@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
     return (
         <main className="max-w-4xl mx-auto px-6 py-8">
             <div className="mb-12">
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
                     {categoryInfo.title}
                 </h1>
                 {categoryInfo.image && (
@@ -54,7 +54,7 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
                         />
                     </div>
                 )}
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
                     {categoryInfo.description}
                 </p>
             </div>
@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
             <div className="mb-8">
                 <Link 
                     href="/blog"
-                    className="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors duration-200"
+                    className="text-amber-800 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-300 transition-colors duration-200"
                 >
                     ← Back to all posts
                 </Link>
@@ -70,17 +70,17 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
 
             <ul className="space-y-4">
                 {posts.map(post => (
-                    <li key={post.id} className="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 hover:shadow-md transition-all duration-200">
+                    <li key={post.id} className="group p-4 rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 hover:shadow-md transition-all duration-200">
                         <Link className="block" href={`/posts/${post.id}`}>
                             <div className="flex items-center justify-between">
                                 <div className="flex-1">
-                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200">
+                                    <h3 className="text-lg font-medium text-stone-900 dark:text-white group-hover:text-amber-800 dark:group-hover:text-amber-400 transition-colors duration-200">
                                         {post.title}
                                     </h3>
                                     <div className="flex items-center gap-3 mt-1">
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{getFormattedDate(post.date)}</p>
+                                        <p className="text-sm text-stone-600 dark:text-stone-400">{getFormattedDate(post.date)}</p>
                                         {post.category && (
-                                            <span className="px-2 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs rounded-full">
+                                            <span className="px-2 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs rounded-full">
                                                 {post.category}
                                             </span>
                                         )}

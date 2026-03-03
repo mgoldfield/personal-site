@@ -6,22 +6,22 @@ export default function TechnicalResources() {
             <div className="mb-8">
                 <Link 
                     href="/blog"
-                    className="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors duration-200"
+                    className="text-amber-800 dark:text-amber-400 hover:text-amber-900 dark:hover:text-amber-300 transition-colors duration-200"
                 >
                     ← Back to blog
                 </Link>
             </div>
             
             <div className="mb-8">
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
                     Technical Resources I&apos;ve Learned From
                 </h1>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-stone-600 dark:text-stone-400">
                     Here are some things I&apos;ve learned from in the past. Most of them are free!
                 </p>
             </div>
 
-            <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
+            <div className="prose prose-lg prose-stone dark:prose-invert max-w-none">
                 <h2>Blogs</h2>
                 <ul>
                     <li><a href="https://jvns.ca/">Julia Evans</a> - Great articles on a variety of technical topics and creativity awesomeness</li>
