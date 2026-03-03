@@ -43,7 +43,7 @@ export function ListItem({post}: ListItemProps) {
 function ResourcesSection() {
     return (
         <div className="mb-8 mt-8">
-            <h2 className="text-lg font-semibold text-slate-800 dark:text-white mb-3">Resources</h2>
+            <h2 className="text-lg font-semibold text-navy dark:text-white mb-3">Resources</h2>
             <div className="grid md:grid-cols-2 gap-4">
                 <Link 
                     href="/resources/technical"
@@ -80,12 +80,12 @@ export default function Posts() {
     return (
         <section className="max-w-4xl mx-auto px-6 py-8">
             <div className="mb-10">
-                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">Blog</h1>
+                <h1 className="text-4xl font-bold text-navy dark:text-white mb-4">Blog</h1>
                 <p className="text-stone-600 dark:text-stone-400 mb-6">Thoughts, ideas, and insights</p>
                 
                 {categories.length > 0 && (
                     <div className="mb-8">
-                        <h2 className="text-lg font-semibold text-slate-800 dark:text-white mb-3">Browse by Topic</h2>
+                        <h2 className="text-lg font-semibold text-navy dark:text-white mb-3">Browse by Topic</h2>
                         <div className="flex flex-wrap gap-3">
                             {categories.map(category => (
                                 <Link 
@@ -102,7 +102,7 @@ export default function Posts() {
             </div>
             
             <div className="mb-6">
-                <h2 className="text-xl font-semibold text-slate-800 dark:text-white">All Posts</h2>
+                <h2 className="text-xl font-semibold text-navy dark:text-white">All Posts</h2>
             </div>
             
             <ul className="space-y-4">

@@ -48,7 +48,7 @@ export default function Main() {
       {/* Recent Blog Posts Section */}
       <section className="max-w-4xl mx-auto px-6 pb-16">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">Recent Posts</h2>
+          <h2 className="text-2xl font-bold text-navy dark:text-white mb-2">Recent Posts</h2>
           <p className="text-stone-600 dark:text-stone-400">Latest thoughts and learnings</p>
         </div>
         

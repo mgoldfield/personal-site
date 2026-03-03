@@ -22,7 +22,7 @@ function HeaderNavLink({
 
 export function HeaderNav() {
   return (
-    <nav className="border-b border-slate-700 sticky top-0 z-50 backdrop-blur-sm bg-slate-800/95">
+    <nav className="border-b border-navy-light sticky top-0 z-50 backdrop-blur-sm bg-navy/95">
       <div className="max-w-4xl mx-auto px-6 py-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
           <Link

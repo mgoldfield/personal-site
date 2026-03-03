@@ -47,7 +47,7 @@ function ProjectCard({
 export default function Projects() {
     return (
         <main className="max-w-4xl mx-auto px-6 py-8">
-            <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-8">Projects</h1>
+            <h1 className="text-4xl font-bold text-navy dark:text-white mb-8">Projects</h1>
 
             <div className="grid md:grid-cols-2 gap-6">
                 <ProjectCard

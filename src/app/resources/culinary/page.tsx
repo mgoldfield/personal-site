@@ -13,7 +13,7 @@ export default function CulinaryResources() {
             </div>
             
             <div className="mb-8">
-                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
+                <h1 className="text-4xl font-bold text-navy dark:text-white mb-4">
                     Culinary Resources I&apos;ve Learned From
                 </h1>
             </div>

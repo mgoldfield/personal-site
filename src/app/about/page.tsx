@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-8">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-6">About</h1>
+        <h1 className="text-4xl font-bold text-navy dark:text-white mb-6">About</h1>
         
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-2">

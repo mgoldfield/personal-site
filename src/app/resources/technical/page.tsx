@@ -13,7 +13,7 @@ export default function TechnicalResources() {
             </div>
             
             <div className="mb-8">
-                <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
+                <h1 className="text-4xl font-bold text-navy dark:text-white mb-4">
                     Technical Resources I&apos;ve Learned From
                 </h1>
                 <p className="text-stone-600 dark:text-stone-400">

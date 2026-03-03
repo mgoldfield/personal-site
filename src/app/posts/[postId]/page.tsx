@@ -19,7 +19,7 @@ export default async function BlogPost({ params }: {params: Promise<{ postId: st
             <main className="max-w-4xl mx-auto px-6 py-8">
                 <article className="prose prose-lg prose-stone dark:prose-invert mx-auto">
                     <header className="mb-8 pb-8 border-b border-stone-200 dark:border-stone-700">
-                        <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4 leading-tight">
+                        <h1 className="text-4xl font-bold text-navy dark:text-white mb-4 leading-tight">
                             {title}
                         </h1>
                         <div className="flex items-center text-stone-600 dark:text-stone-400">
