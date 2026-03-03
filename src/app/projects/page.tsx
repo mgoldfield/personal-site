@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default async function Projects() {
+export default function Projects() {
     return (
   
     <main className="px-6 prose prose-lg prose-slate dark:prose-invert mx-auto">
@@ -51,7 +51,7 @@ export default async function Projects() {
                 <div className='underline'>LoopMagic! in-browser DAW</div>
                 <Image
                     alt="picture of loopmagic in action"
-                    src="/loopmagic.jpg"
+                    src="/images/loopmagic.jpg"
                     className='m-0'
                     width={500}
                     height={300} />

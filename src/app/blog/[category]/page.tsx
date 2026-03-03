@@ -17,6 +17,10 @@ const categoryDescriptions: Record<string, {title: string, description: string, 
         title: 'Cooking, Fire, and Ovens',
         description: 'This wood fired oven was built for me by my friend Sam. Stay tuned for more posts about firing and baking techniques and recipes!',
         image: '/images/oven.jpg'
+    },
+    'ml': {
+        title: 'Machine Learning',
+        description: 'Notes and reflections from machine learning projects and competitions.'
     }
 };
 

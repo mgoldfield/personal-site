@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/variables.css";
 import "katex/dist/katex.min.css";
 import type { Metadata } from "next";
 import { Inter, Crimson_Pro } from "next/font/google";
@@ -29,9 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>Matthew Goldfield</title>
-      </head>
       <body className={`${inter.variable} ${crimsonPro.variable} dark:bg-slate-800`}>
         <header className="">
           <HeaderNav />

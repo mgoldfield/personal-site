@@ -97,7 +97,7 @@ export default function Posts() {
             </div>
             
             <ul className="space-y-4">
-                {posts.map(post => ListItem({post}))}
+                {posts.map(post => <ListItem key={post.id} post={post} />)}
             </ul>
 
             <ResourcesSection />
