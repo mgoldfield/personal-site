@@ -1,75 +1,90 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+function ProjectCard({
+    title,
+    href,
+    description,
+    images,
+    children
+}: {
+    title: string;
+    href: string;
+    description: string;
+    images: { src: string; alt: string; width: number; height: number }[];
+    children?: React.ReactNode;
+}) {
+    return (
+        <div className="group rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 overflow-hidden hover:shadow-md transition-all duration-200">
+            <Link href={href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-4">
+                {images.map((img, i) => (
+                    <Image
+                        key={i}
+                        src={img.src}
+                        alt={img.alt}
+                        width={img.width}
+                        height={img.height}
+                        className="rounded object-cover"
+                    />
+                ))}
+            </Link>
+            <div className="p-4">
+                <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200"
+                >
+                    {title}
+                </Link>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{description}</p>
+                {children}
+            </div>
+        </div>
+    );
+}
 
 export default function Projects() {
     return (
-  
-    <main className="px-6 prose prose-lg prose-slate dark:prose-invert mx-auto">
-      <h1 className="text-3xl mt-4 mb-0">Projects</h1>
-      <article>
-        <section className="m-5">
-            <a href="https://mollybajgot.bandcamp.com/album/revelry" className="underline"><em>Revelry</em> by Molly Bajgot</a>
-            <div>
-                <a href="https://mollybajgot.bandcamp.com/album/revelry">
-                    <Image 
-                        alt="Revelry album art" 
-                        src="https://f4.bcbits.com/img/a1516643014_10.jpg" 
-                        className="m-0"
-                        width={300}
-                        height={300} />
-                </a>
+        <main className="max-w-4xl mx-auto px-6 py-8">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Projects</h1>
+
+            <div className="grid md:grid-cols-2 gap-6">
+                <ProjectCard
+                    title="Revelry by Molly Bajgot"
+                    href="https://mollybajgot.bandcamp.com/album/revelry"
+                    description="keyboards"
+                    images={[{ src: "https://f4.bcbits.com/img/a1516643014_10.jpg", alt: "Revelry album art", width: 400, height: 400 }]}
+                />
+
+                <ProjectCard
+                    title="Tishrei: The End is the Beginning — Cap and Scarf"
+                    href="https://elulmusicproject.bandcamp.com/album/tishrei-the-end-is-the-beginning"
+                    description="producer and multi-instrumentalist (co-produced with Anat Hochberg)"
+                    images={[{ src: "https://f4.bcbits.com/img/a3430763899_10.jpg", alt: "Tishrei: The End is the Beginning album art", width: 400, height: 400 }]}
+                />
+
+                <ProjectCard
+                    title="Elul: Songs for Turning — Cap and Scarf"
+                    href="https://elulmusicproject.bandcamp.com/album/elul-songs-for-turning"
+                    description="producer and multi-instrumentalist (co-produced with Anat Hochberg)"
+                    images={[{ src: "https://f4.bcbits.com/img/a2638810254_10.jpg", alt: "Elul: Songs for Turning album art", width: 400, height: 400 }]}
+                />
+
+                <ProjectCard
+                    title="LoopMagic! in-browser DAW"
+                    href="https://github.com/mgoldfield/nodelooper"
+                    description="a simple in-browser DAW for recording and looping"
+                    images={[{ src: "/images/loopmagic.jpg", alt: "LoopMagic in action", width: 500, height: 300 }]}
+                />
+
+                <ProjectCard
+                    title="The Rationales"
+                    href="https://therationales.bandcamp.com/"
+                    description="keyboards and bass in performances and recordings 2008-2014"
+                    images={[{ src: "https://f4.bcbits.com/img/a0668426547_10.jpg", alt: "The Rationales album art", width: 400, height: 400 }]}
+                />
             </div>
-            <div className="prose-sm">
-                keyboards
-            </div>
-        </section>
-        <section className="m-5">
-            <a href="https://elulmusicproject.bandcamp.com/music" className="underline">High Holiday Albums with <em>Cap and Scarf</em></a>
-            <div className="flex flex-row justify-between">
-                <a href="https://elulmusicproject.bandcamp.com/album/tishrei-the-end-is-the-beginning">
-                    <Image 
-                        alt="Tishrei: The End is the Beginning album art" 
-                        src="https://f4.bcbits.com/img/a3430763899_10.jpg" 
-                        className="m-0"
-                        width={300}
-                        height={300} />
-                </a>
-                <a href="https://elulmusicproject.bandcamp.com/album/elul-songs-for-turning">
-                    <Image 
-                        alt="Elul album art" 
-                        src="https://f4.bcbits.com/img/a2638810254_10.jpg" 
-                        width={300}
-                        height={300}
-                        className="m-0"/>
-                </a>
-            </div>
-            <div className="prose-sm">
-                producer and multi-instrumentalist (co-produced with Anat Hochberg)
-            </div>
-        </section>
-        <section className='m-5'>
-            <a href="https://github.com/mgoldfield/nodelooper">
-                <div className='underline'>LoopMagic! in-browser DAW</div>
-                <Image
-                    alt="picture of loopmagic in action"
-                    src="/images/loopmagic.jpg"
-                    className='m-0'
-                    width={500}
-                    height={300} />
-            </a>
-        </section>
-        <section className="m-5">
-            <a href="https://therationales.bandcamp.com/">
-                <div className="underline">The Rationales</div>
-                <Image 
-                    alt="rationales album art" 
-                    src="https://f4.bcbits.com/img/a0668426547_10.jpg" 
-                    className="m-0"
-                    width={300}
-                    height={300}/>
-            </a>
-            <div className="prose-sm">keyboards and bass in performances and recordings 2008-2014</div>
-        </section>
-      </article>
-    </main>
-    )
-  };
+        </main>
+    );
+}

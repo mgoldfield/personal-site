@@ -14,15 +14,15 @@ export default function About() {
               </p>
               
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
-                <p>I am currently a software engineer at <a href="https://www.izotope.com/" className="text-blue-600 dark:text-blue-400 hover:underline">iZotope</a>.</p>
+                <p>I am currently a software engineer at <a href="https://www.izotope.com/" className="text-teal-600 dark:text-teal-400 hover:underline">iZotope</a>.</p>
                 
-                <p>Various current and past software projects, including a (now inactive) simple in-browser DAW called <a href="https://github.com/mgoldfield/nodelooper" className="text-blue-600 dark:text-blue-400 hover:underline">LoopMagic!</a>.</p>
+                <p>Various current and past software projects, including a (now inactive) simple in-browser DAW called <a href="https://github.com/mgoldfield/nodelooper" className="text-teal-600 dark:text-teal-400 hover:underline">LoopMagic!</a>.</p>
                 
-                <p>I sometimes make records with <a href="https://www.anathalevyhochberg.com/" className="text-blue-600 dark:text-blue-400 hover:underline">Anat Halevy Hochberg</a> under our duet <a href="https://elulmusicproject.bandcamp.com/" className="text-blue-600 dark:text-blue-400 hover:underline">Cap and Scarf</a>.</p>
+                <p>I sometimes make records with <a href="https://www.anathalevyhochberg.com/" className="text-teal-600 dark:text-teal-400 hover:underline">Anat Halevy Hochberg</a> under our duet <a href="https://elulmusicproject.bandcamp.com/" className="text-teal-600 dark:text-teal-400 hover:underline">Cap and Scarf</a>.</p>
                 
-                <p>From 2008-2015 I played in the rock band <a href="https://therationales.bandcamp.com/" className="text-blue-600 dark:text-blue-400 hover:underline">The Rationales</a>.</p>
+                <p>From 2008-2015 I played in the rock band <a href="https://therationales.bandcamp.com/" className="text-teal-600 dark:text-teal-400 hover:underline">The Rationales</a>.</p>
                 
-                <p>I am somewhat obsessed with cooking, especially smoking and curing, fermenting, bread, pizza, noodles, and dumplings. Here are a few <a href="https://photos.app.goo.gl/SdtHzGY2h6QRuHKm6" className="text-blue-600 dark:text-blue-400 hover:underline">creations</a>.</p>
+                <p>I am somewhat obsessed with cooking, especially smoking and curing, fermenting, bread, pizza, noodles, and dumplings. Here are a few <a href="https://photos.app.goo.gl/SdtHzGY2h6QRuHKm6" className="text-teal-600 dark:text-teal-400 hover:underline">creations</a>.</p>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function CulinaryResources() {
             <div className="mb-8">
                 <Link 
                     href="/blog"
-                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
+                    className="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors duration-200"
                 >
                     ← Back to blog
                 </Link>

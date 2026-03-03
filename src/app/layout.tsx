@@ -28,13 +28,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${crimsonPro.variable} dark:bg-slate-800`}>
-        <header className="">
+      <body className={`${inter.variable} ${crimsonPro.variable} dark:bg-slate-800 min-h-screen flex flex-col`}>
+        <header>
           <HeaderNav />
         </header>
-        <div>
+        <div className="flex-1">
           {children}
         </div>
+        <footer className="border-t border-gray-200 dark:border-gray-700">
+          <div className="max-w-4xl mx-auto px-6 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+            &copy; {new Date().getFullYear()} Matthew Goldfield
+          </div>
+        </footer>
       </body>
     </html>
   );

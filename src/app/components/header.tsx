@@ -22,16 +22,16 @@ function HeaderNavLink({
 
 export function HeaderNav() {
   return (
-    <nav className="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 backdrop-blur-sm bg-white/95 dark:bg-slate-900/95">
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+    <nav className="border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 backdrop-blur-sm bg-white/95 dark:bg-slate-900/95">
+      <div className="max-w-4xl mx-auto px-6 py-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+          <Link
+            href="/"
+            className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors duration-200"
           >
             Matthew Goldfield
           </Link>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-5 sm:space-x-8">
             <HeaderNavLink href="/about">About</HeaderNavLink>
             <HeaderNavLink href="/projects">Projects</HeaderNavLink>
             <HeaderNavLink href="/blog">Blog</HeaderNavLink>

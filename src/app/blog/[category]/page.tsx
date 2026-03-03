@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
             <div className="mb-8">
                 <Link 
                     href="/blog"
-                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
+                    className="text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 transition-colors duration-200"
                 >
                     ← Back to all posts
                 </Link>
@@ -74,13 +74,13 @@ export default async function CategoryPage({ params }: {params: Promise<{ catego
                         <Link className="block" href={`/posts/${post.id}`}>
                             <div className="flex items-center justify-between">
                                 <div className="flex-1">
-                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200">
                                         {post.title}
                                     </h3>
                                     <div className="flex items-center gap-3 mt-1">
                                         <p className="text-sm text-gray-600 dark:text-gray-400">{getFormattedDate(post.date)}</p>
                                         {post.category && (
-                                            <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+                                            <span className="px-2 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs rounded-full">
                                                 {post.category}
                                             </span>
                                         )}

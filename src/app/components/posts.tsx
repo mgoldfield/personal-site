@@ -1,9 +1,18 @@
 import { getSortedPosts, getFormattedDate, getCategories } from "@/lib/posts";
 import Link from "next/link";
 
+const categoryDisplayNames: Record<string, string> = {
+    'dsp': 'DSP & Audio',
+    'cooking': 'Cooking',
+    'ml': 'Machine Learning',
+};
+
+function getCategoryLabel(category: string) {
+    return categoryDisplayNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
+}
+
 type ListItemProps = {
     post: Blogpost,
-
 }
 export function ListItem({post}: ListItemProps) {
     const {id, title, date, category} = post;
@@ -13,13 +22,13 @@ export function ListItem({post}: ListItemProps) {
             <Link className="block" href={`/posts/${id}`}>
                 <div className="flex items-center justify-between">
                     <div className="flex-1">
-                        <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                        <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200">
                             {title}
                         </h3>
                         <div className="flex items-center gap-3 mt-1">
                             <p className="text-sm text-gray-600 dark:text-gray-400">{formattedDate}</p>
                             {category && (
-                                <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
+                                <span className="px-2 py-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs rounded-full">
                                     {category}
                                 </span>
                             )}
@@ -40,7 +49,7 @@ function ResourcesSection() {
                     href="/resources/technical"
                     className="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-700 hover:shadow-md transition-all duration-200"
                 >
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200">
                         Technical Resources
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
@@ -52,7 +61,7 @@ function ResourcesSection() {
                     href="/resources/culinary"
                     className="group p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-700 hover:shadow-md transition-all duration-200"
                 >
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-200">
                         Culinary Resources
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
@@ -82,9 +91,9 @@ export default function Posts() {
                                 <Link 
                                     key={category}
                                     href={`/blog/${category}`}
-                                    className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 font-medium"
+                                    className="px-4 py-2 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 rounded-lg hover:bg-teal-200 dark:hover:bg-teal-800 transition-colors duration-200 font-medium"
                                 >
-                                    {category === 'dsp' ? 'DSP & Audio' : (category || '').charAt(0).toUpperCase() + (category || '').slice(1)}
+                                    {getCategoryLabel(category)}
                                 </Link>
                             ))}
                         </div>

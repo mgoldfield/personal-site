@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import {remark} from 'remark';
+import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkRehype from 'remark-rehype';
 import rehypeKatex from 'rehype-katex';
@@ -28,6 +29,7 @@ import rehypeStringify from 'rehype-stringify';
 
  export async function transformMarkdown(text: string) {
     return (await remark()
+        .use(remarkGfm)
         .use(remarkMath)
         .use(remarkRehype, { allowDangerousHtml: true })
         .use(rehypeKatex)
@@ -59,6 +61,6 @@ export function getPostsByCategory(category: string) {
 
 export function getCategories() {
     const allPosts = getSortedPosts();
-    const categories = new Set(allPosts.map(post => post.category).filter(Boolean));
+    const categories = new Set(allPosts.map(post => post.category).filter((c): c is string => Boolean(c)));
     return Array.from(categories);
 }
